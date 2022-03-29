@@ -1,1 +1,13 @@
+############# Try-Except #############
+1. 
+    # 如果try里面的条件是valueError的话，
+    # 那么将会返回那个print里面的内容
+      
+    # Example：
+      Try:
+        xxxxxxxxxxx
+      Except ValueError:
+        print('')
 
+2.
+ 
