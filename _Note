@@ -5,7 +5,7 @@
     # 那么将会返回那个print里面的内容
     # 错误的类型还有 ZeroDivisionError, IndexError, KeyError, NameError, SyntaxError, ValueError.
    
-   # Example：
+   --- Example ---
       try:
         xxxxxxxxxxx
       except ValueError:
@@ -16,7 +16,7 @@
 
     # 补小的再补大的
     
-    # Example：
+    --- Example ---
       try:
         xxxxxxxxxxx
       except ZeroDivisionError:
