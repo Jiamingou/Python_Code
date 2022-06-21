@@ -1,1 +1,2 @@
-ok
+for i in range(2):
+    print('OK')
