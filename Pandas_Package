@@ -37,10 +37,15 @@ from pandas_datareader import data    # 用于读取网上数据
     ## 读取单个数据框
     print(df.loc['2010-03-10','SPY'])
     
+    
+# 关于数据Pandas numpy array上面的切片操作
+
     ## 我们也可以把pandas的df当成是一个矩阵，nd1[row,col] 按照这个格式而言
     nd1 = df.values  
-    print(nd1[0,0])
-
+    nd1[0,0]
+    
+    ## 某些行与列的切片操作，在这个例子里0-2行，1-2列，3不包括在里面
+    nd1[0:3,1:3] 
 
 
 # 关于绘图
