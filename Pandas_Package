@@ -2,6 +2,7 @@ import pandas as pd
 from pandas_datareader import data    # 用于读取网上数据
 
 
+
 # 关于数据的读取与na的操作
 
     ## 从雅虎财经上读取澳洲指数数据，并指定要求某些列，然后再将列改名
@@ -20,8 +21,6 @@ from pandas_datareader import data    # 用于读取网上数据
 
 
 
-
-
 # 关于数据Pandas df上面的切片操作
 
     ## 特定行数切割
@@ -37,6 +36,7 @@ from pandas_datareader import data    # 用于读取网上数据
     print(df.loc['2010-03-10':'2010-03-15',['SPY','IBM']])
     # 读取单个数据框
     print(df.loc['2010-03-10','SPY'])
+
 
 
 # 关于绘图
