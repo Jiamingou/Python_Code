@@ -1,2 +1,7 @@
-import pandas as pd
-from pandas_datareader import data
+import pandas as pd   
+from pandas_datareader import data    # 用于读取网上数据
+
+# 从雅虎财经上读取澳洲指数数据，并指定要求某些列，然后再将列改名
+ASX = data.get_data_yahoo('^AXJO',start='11-21-1992',end='06-24-2022',interval='d')['Adj Close']
+ASX = ASX.rename(columns={'Adj Close': 'ASX'})
+
