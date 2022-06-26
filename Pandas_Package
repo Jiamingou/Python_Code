@@ -45,3 +45,7 @@ from pandas_datareader import data    # 用于读取网上数据
     ax = df.plot(title = "Stock Price")
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
+    
+    ## 特定列进行绘图
+    df[['Close','Adj Close']].plot()
+    
