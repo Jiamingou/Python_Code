@@ -49,3 +49,9 @@ from pandas_datareader import data    # 用于读取网上数据
     ## 特定列进行绘图
     df[['Close','Adj Close']].plot()
     
+    ## 标准化数据，将所有股票的起始点设置为$1，让图表看起来有对比性。简单来说就是除以每个股票一开始的价格。
+    df = df/df.loc['2010-01-04']
+    
+    
+    
+    
