@@ -28,14 +28,18 @@ from pandas_datareader import data    # 用于读取网上数据
     ## 只选中个别行数
     print(df.loc[['2010-03-10','2010-03-15']])
 
-    # 切割某列
+    ## 切割某列
     print(df['GOOG']) 
     print(df[['GLD','GOOG']]) 
 
-    # 切割某行加某列
+    ## 切割某行加某列
     print(df.loc['2010-03-10':'2010-03-15',['SPY','IBM']])
-    # 读取单个数据框
+    ## 读取单个数据框
     print(df.loc['2010-03-10','SPY'])
+    
+    ## 我们也可以把pandas的df当成是一个矩阵，nd1[row,col] 按照这个格式而言
+    nd1 = df.values  
+    print(nd1[0,0])
 
 
 
