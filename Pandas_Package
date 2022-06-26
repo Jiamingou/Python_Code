@@ -41,3 +41,7 @@ from pandas_datareader import data    # 用于读取网上数据
 
 # 关于绘图
 
+    ## 关于整个df绘图时候的标题设置
+    ax = df.plot(title = "Stock Price")
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price")
