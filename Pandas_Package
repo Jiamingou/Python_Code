@@ -18,7 +18,9 @@ from pandas_datareader import data    # 用于读取网上数据
 
     ## 有na的行将会被剔除
     ASX = ASX.dropna()
-
+    
+    ## 将dataframe转换成csv并输出到文件夹
+    ASX.to_csv('filename.csv')
 
 
 # 关于数据Pandas df上面的切片操作
