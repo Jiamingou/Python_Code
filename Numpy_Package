@@ -23,7 +23,7 @@ import numpy as np
   ## 单个随机数 [1,10)
   np.random.randint(10)
   np.random.randint(1,10)
-  ## 5个随机数 [1,10)
+  ## 5个随机数1D Array [1,10)
   np.random.randint(1,10,5) # 5 random int ranging from 1-9
   ## 随机数Array, 两行三列，填充[1,10)的随机数
   np.random.randint(1,10,size=(2,3)) # 2 row 3 column array 1-9
