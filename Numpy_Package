@@ -25,7 +25,6 @@ import numpy as np
 
   ## 随机数Array, 五行四列，每个单元格填充0-1的随机数值
   np.random.random((5,4))
-  np.random.rand(5,4)
   ## 5个随机整数1D Array [1,10)
   np.random.randint(1,10,5) # 5 random int ranging from 1-9
   ## 随机整数Array, 两行三列，填充[1,10)的随机数
