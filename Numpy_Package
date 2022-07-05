@@ -36,3 +36,19 @@ import numpy as np
   ## 随机正态数Array，两行三列，填充呈正态分布的随机数(Mean = 50, std = 10)
   np.random.normal(50,10,size=(2,3))
   
+  
+# 属性
+
+  a = np.random.random((5,4))
+  
+  # 打印数组的行列数
+  a.shape
+  a.shape[0] # 行数row
+  a.shape[1] # 列数column
+  len(a.shape) # 数组的维度，一维两维还是三维
+  
+  
+  
+  
+  
+  
