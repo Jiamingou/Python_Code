@@ -26,9 +26,9 @@ import numpy as np
   ## 随机数Array, 五行四列，每个单元格填充0-1的随机数值
   np.random.random((5,4))
   ## 5个随机整数1D Array [1,10)
-  np.random.randint(1,10,5) # 5 random int ranging from 1-9
+  np.random.randint(1,10,5)
   ## 随机整数Array, 两行三列，填充[1,10)的随机数
-  np.random.randint(1,10,size=(2,3)) # 2 row 3 column array 1-9
+  np.random.randint(1,10,size=(2,3))
 
   
   ## 随机正态数Array，两行三列，填充呈正态分布的随机数(Mean = 0, std = 1)
@@ -41,11 +41,15 @@ import numpy as np
 
   a = np.random.random((5,4))
   
-  # 打印数组的行列数
-  a.shape
+  a.shape # 打印数组的行列数
   a.shape[0] # 行数row
   a.shape[1] # 列数column
   len(a.shape) # 数组的维度，一维两维还是三维
+  
+  a.size # 打印数组总共有几个值
+  a.dtype # 打印数组值的数据类型
+  
+  
   
   
   
