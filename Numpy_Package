@@ -13,5 +13,12 @@ import numpy as np
   np.empty((5,4))
   ## 空Array, 五行四列二深度 (里面其实不是真空，是象征着内存位置的小数点)
   np.empty((5,4,2))
+  ## 填满数值为1的Array
+  np.ones((5,4))
+  
+  
+  ## 随机数Array, 五行四列，每个单元格填充0-1的随机数值
+  np.random.random((5,4))
+  np.random.rand(5,4)
   
   
