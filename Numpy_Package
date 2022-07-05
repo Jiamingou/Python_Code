@@ -22,4 +22,6 @@ import numpy as np
   np.random.rand(5,4)
   ## 随机正态数Array，五行四列，填充呈正态分布的随机数(Mean = 0, std = 1)
   np.random.normal(size=(2,3))
+  ## 随机正态数Array，更改条件 (Mean = 50, std = 10)
+  np.random.normal(50,10,size=(2,3))
   
