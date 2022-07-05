@@ -20,5 +20,6 @@ import numpy as np
   ## 随机数Array, 五行四列，每个单元格填充0-1的随机数值
   np.random.random((5,4))
   np.random.rand(5,4)
-  
+  ## 随机正态数Array，五行四列，填充呈正态分布的随机数(Mean = 0, std = 1)
+  np.random.normal(size=(2,3))
   
