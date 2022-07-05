@@ -30,8 +30,6 @@ import numpy as np
   ## 随机整数Array, 两行三列，填充[1,10)的随机数
   np.random.randint(1,10,size=(2,3)) # 2 row 3 column array 1-9
   
-  
-  
   ## 随机正态数Array，两行三列，填充呈正态分布的随机数(Mean = 0, std = 1)
   np.random.normal(size=(2,3))
   ## 随机正态数Array，两行三列，填充呈正态分布的随机数(Mean = 50, std = 10)
