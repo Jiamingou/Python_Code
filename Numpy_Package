@@ -55,11 +55,17 @@ import numpy as np
   
 # 运算
 
-  ## 全部数字求和
-  a.sum()
-  ## 全部行或全部列的求和，axis=0代表列，axis=1代表行
-  a.sum(axis=0)
-  a.sum(axis=1)
+  ## 求和
+  a.sum() # 全部数字求
+  a.sum(axis=0) # 各列求和
+  a.sum(axis=1) # 各行求和
+  
+  ## 特征
+  a.min(axis=0) # 各列的最小数
+  a.max(axis=1) # 各行的最大数
+  a.mean() # 全部数字的均值
+  
+  
   
   
   
