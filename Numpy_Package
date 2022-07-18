@@ -18,6 +18,10 @@ import numpy as np
   
 # 随机数
 
+  ## 设置随机种子
+  np.random.seed(693)
+  a = np.random.randint(0,10,size=(5,4)) # 设置好种子后，下面的随机数就变成固定藏在693号里面了。
+
   ## 单个随机整数 [1,10)
   np.random.randint(10)
   np.random.randint(1,10)
