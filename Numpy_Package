@@ -55,8 +55,11 @@ import numpy as np
   
 # 运算
 
-  ## 求和
+  ## 全部数字求和
   a.sum()
+  ## 全部行或全部列的求和，axis=0代表列，axis=1代表行
+  a.sum(axis=0)
+  a.sum(axis=1)
   
   
   
