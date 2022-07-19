@@ -5,8 +5,8 @@ from pandas_datareader import data    # 用于读取网上数据
 
 # 关于数据的读取与na的操作
 
-    ## 从雅虎财经上读取澳洲指数数据，并指定要求某些列，然后再将列改名
-    ASX = data.get_data_yahoo('^AXJO',start='11-21-1992',end='06-24-2022',interval='d')['Adj Close']
+    ## 从雅虎财经上读取澳洲指数数据，并指定要求某些列(原来是series数据，需要转成dataframe)，然后再将列改名
+    ASX = data.get_data_yahoo('^AXJO',start='11-21-1992',end='06-24-2022',interval='d')['Adj Close'].to_frame()
     ASX = ASX.rename(columns={'Adj Close': 'ASX'})
 
     ## 从硬盘上读取相应数据，将‘Date’这列数据变成index，并将它变成日期格式
