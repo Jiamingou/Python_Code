@@ -90,6 +90,9 @@ import numpy as np
   a.max(axis=1) # 各行的最大数
   a.mean() # 全部数字的均值
   
+  ## 乘法
+  a*2 # 可以直接与数组相乘，返回结果后的数组
+  
   
   
   
