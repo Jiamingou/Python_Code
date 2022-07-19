@@ -102,8 +102,10 @@ import matplotlib.pyplot as plt
     
     ## 形成柱状图，通常用于回报率
     return.hist(bins=90) # bins越多，数据间隔分得越小，也就更为精确
-    ## 在图上画垂直线 (import matplotlib.pyplot as plt), mean只是一个数
-    plt.axvline(mean,color='r',linestyle='dashed',linewidth=2)
+    ## 在图上画垂直线 (import matplotlib.pyplot as plt)
+    plt.axvline(mean,color='r',linestyle='dashed',linewidth=2) # mean只是一个数
+    plt.axvline(std,color='r',linestyle='dashed',linewidth=2) 
+    plt.axvline(-std,color='r',linestyle='dashed',linewidth=2)
     
     
     
