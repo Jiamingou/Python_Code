@@ -113,6 +113,9 @@ import matplotlib.pyplot as plt
     plt.legend(loc='upper right')
     
     
+@ 关于散点图
     
+    ## 形成散点图，通常用于回报率，请注意df是包括了SPY与XOM回报率的dataframe
+    df.plot(kind='scatter',x='SPY',y='XOM')
     
     
