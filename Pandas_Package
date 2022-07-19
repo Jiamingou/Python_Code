@@ -100,7 +100,7 @@ from pandas_datareader import data    # 用于读取网上数据
 @ 关于柱状图
     
     ## 形成柱状图，通常用于回报率
-    return.hist()
+    return.hist(bins=90) # bins越多，数据间隔分得越小，也就更为精确
     
     
     
