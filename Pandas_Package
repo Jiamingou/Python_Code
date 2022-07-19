@@ -84,6 +84,7 @@ from pandas_datareader import data    # 用于读取网上数据
     ax = df.plot(title = "Stock Price",fontsize=2)
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
+    新数据.plot(secondary_y=True) # 加多一个y轴
     
     ## 如果想往原有的图上增加数据的话, 但是这种方法并不会往legend上添加标题。选择一：我们可以选择跟原有的数据组进行合并。选择二：再一次调用legend，也就是ax.legend(loc='upper left')
     新数据.plot(label='数据的标题')
