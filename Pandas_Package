@@ -18,6 +18,9 @@ from pandas_datareader import data    # 用于读取网上数据
 
     ## 有na的行将会被剔除
     ASX = ASX.dropna()
+    ## 有些数据可能中间会产生缺失，所以为了其它证券数据的整齐性，我们会对那个证券进行单独的“向前填充”，然后“向后填充”。意思就是固定一个价格不懂，然后向上或向下跳空
+    df.fillna(method='ffill',inplace="TRUE")
+    
     
     ## 将dataframe转换成csv并输出到文件夹
     ASX.to_csv('filename.csv')
