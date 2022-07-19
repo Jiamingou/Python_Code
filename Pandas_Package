@@ -78,6 +78,9 @@ from pandas_datareader import data    # 用于读取网上数据
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
     
+    ## 如果想往原有的图上增加数据的话
+    新数据.plot(label='数据的标题')
+    
     ## 特定列进行绘图
     df[['Close','Adj Close']].plot()
     
