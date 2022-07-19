@@ -63,9 +63,13 @@ from pandas_datareader import data    # 用于读取网上数据
 --------------------------------------------------------------------------------------------------------    
  
 # 关于技术指标
+
+    ## 快速运算回报率
+    df1['SPY'].pct_change(1) # (price/price_yesterday)-1
     
     ## 移动平均线
     moving_avg = df['SPY'].rolling(window=20).mean()  # 这个是20天的移动平均线
+
 
 
 
