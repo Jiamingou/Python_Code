@@ -119,7 +119,7 @@ import numpy as np
     ## 形成散点图，通常用于回报率，请注意df是包括了SPY与XOM回报率的dataframe
     df.plot(kind='scatter',x='SPY',y='XOM')
     ## 利用numpy与matplotlib画一条line of best fit。
-    beta_XOM, alpha_XOM = np.polyfit(ret_df['SPY'],ret_df['XOM'],1) # 其实会返回一个列表，第一个数字为beta，第二个数字为alpha
+    beta_XOM, alpha_XOM = np.polyfit(ret_df['SPY'],ret_df['XOM'],1) # 其实会返回一个列表，第一个数字为beta，第二个数字为alpha。还有最后面那个1代表是linear regression。
     plt.plot(ret_df['SPY'],beta_XOM*ret_df['SPY']+alpha_XOM,'-',color='r')  # 画一条直线
     
     
