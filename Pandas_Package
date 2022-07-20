@@ -71,6 +71,8 @@ import numpy as np
 
     ## 快速运算回报率
     df1['SPY'].pct_change(1) # (price/price_yesterday)-1
+    ## 计算correlation
+    df1.corr(method='pearson') # pearson是最常用的计算方法
     
     ## 移动平均线
     moving_avg = df['SPY'].rolling(window=20).mean()  # 这个是20天的移动平均线
