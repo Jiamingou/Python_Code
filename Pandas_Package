@@ -120,5 +120,6 @@ import numpy as np
     df.plot(kind='scatter',x='SPY',y='XOM')
     ## 利用numpy与matplotlib画一条line of best fit。
     beta_XOM, alpha_XOM = np.polyfit(ret_df['SPY'],ret_df['XOM'],1) # 其实会返回一个列表，第一个数字为beta，第二个数字为alpha
+    plt.plot(ret_df['SPY'],beta_XOM*ret_df['SPY']+alpha_XOM,'-',color='r')  # 画一条直线
     
     
