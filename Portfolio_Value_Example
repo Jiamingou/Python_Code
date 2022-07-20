@@ -1,0 +1,45 @@
+from pandas_datareader import data
+
+
+start_date = '2010-1-1'
+end_date = '2012-12-31'
+
+# Get the first ticker
+df1 = data.get_data_yahoo('SPY',start=start_date, end=end_date ,interval='d')['Adj Close'].to_frame()
+df1 = df1.rename(columns={'Adj Close': 'SPY'})
+print(df1)
+
+
+# Merge the rest of datas
+tickers= ['XOM','GOOGL','GLD']
+
+for ticker in tickers:
+    temp = data.get_data_yahoo(ticker,start= start_date ,end=end_date ,interval='d')['Adj Close'].to_frame()
+    temp = temp.rename(columns={'Adj Close': ticker})
+    df1 = df1.join(temp)
+
+print(df1)
+
+# Get the normalized data
+normed_df = df1/df1.iloc[0,:]
+print(normed_df)
+
+# seperate them into portions (SPY gets 0.4 , XOM gets 0.4, GOOGL gets 0.1, GOLD gets 0.1 )
+normed_df['SPY'] *= 0.4
+normed_df['XOM'] *= 0.4
+normed_df['GOOGL'] *= 0.1
+normed_df['GLD'] *= 0.1
+print(normed_df)
+
+# get the position value on each stocks
+normed_df *= 1000000
+print(normed_df)
+
+# get the portfolio value
+normed_df['Port_Value'] = normed_df.sum(axis=1).astype(int)
+print(normed_df)
+
+# Plot the output
+ax = normed_df['Port_Value'].plot(title = "Portfolio Value")
+ax.set_xlabel("Date")
+ax.set_ylabel("Value")
