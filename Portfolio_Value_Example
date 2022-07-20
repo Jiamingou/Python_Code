@@ -1,3 +1,6 @@
+# Assume Investing 1 million into the portfolio with SPY(40%), XOM(40%), GOOGL(10%), GLD(10%). At the end of year 3, the portfolio has a net value of 1335012, which 
+# achieve 33.5% Cumulative Return.
+
 from pandas_datareader import data
 
 
