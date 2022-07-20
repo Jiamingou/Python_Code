@@ -1,6 +1,7 @@
 import pandas as pd   
 from pandas_datareader import data    # 用于读取网上数据
-import matplotlib.pyplot as plt  
+import matplotlib.pyplot as plt
+import numpy as np
 
 --------------------------------------------------------------------------------------------------------
 
@@ -117,5 +118,7 @@ import matplotlib.pyplot as plt
     
     ## 形成散点图，通常用于回报率，请注意df是包括了SPY与XOM回报率的dataframe
     df.plot(kind='scatter',x='SPY',y='XOM')
+    ## 利用numpy与matplotlib画一条line of best fit。
+    beta_XOM, alpha_XOM = np.polyfit(ret_df['SPY'],ret_df['XOM'],1) # 其实会返回一个列表，第一个数字为beta，第二个数字为alpha
     
     
